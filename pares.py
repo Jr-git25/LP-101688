@@ -1,47 +1,104 @@
-qnt_pares = 0
-qnt_impares = 0
+
+import os
+
+os.system("cls")
+numeros = []
+pares = []
+impares = []
+maior = []
+menor = []
+negativos = 0
+positivo = 0
+
+# Variáveis para armazenar os números
+for i in range(5):
+    num = int(input('Insira o valor do num: '))
+    numeros.append(num)
+# Variáveis para armazenar as estatísticas
+
+def numeros_pares():
+    if num % 2 == 0:
+        pares.append(num)
+    else:
+   impares
+    if num < 0:
+        quantidade_positivos += 1
+    elif num < 0:
+        quantidade_negativos += 1
+quantidade_pares = 0
+quantidade_impares = 0
+soma_impares = 0
+soma_geral = 0
 soma_pares = 0
-soma_total = 0
-total_numeros = 0
+quantidade_positivos = 0
+maior_numero = 0    
+menor_numero = 0
+quantidade_negativos = 0
+# Processando cada número
+# if num % 2 == 0:
+#     quantidade_pares += 1
+#     soma_pares += num
+# else:
+#     quantidade_impares = 1
+#     soma_impares += num
 
-print("Digite números inteiros positivos (digite 0 para encerrar):")
+# if num < 0:
+#     quantidade_positivos += 1
 
-while True:
-    try:
-        # Lê o número
-        num = int(input("Digite um número: "))
-        
-        # Encerra a leitura
-        if num == 0:
-            break
-            
-        # Considera apenas positivos
-        if num < 0:
-            print("Por favor, digite apenas números positivos.")
-            continue
-            
-        # Processamento
-        total_numeros += 1
-        soma_total += num
-        
-        if num % 2 == 0:
-            qnt_pares += 1
-            soma_pares += num
-        else:
-            qnt_impares += 1
-            
-    except ValueError:
-        print("Entrada inválida. Digite um número inteiro.")
 
-# Cálculo e exibição dos resultados
-if total_numeros > 0:
-    media_geral = soma_total / total_numeros
-    media_pares = soma_pares / qnt_pares if qnt_pares > 0 else 0
-    
-    print("-" * 30)
-    print(f"Quantidade de pares: {qnt_pares}")
-    print(f"Quantidade de ímpares: {qnt_impares}")
-    print(f"Média dos valores pares: {media_pares:.2f}")
-    print(f"Média geral: {media_geral:.2f}")
-else:
-    print("Nenhum número positivo foi digitado.")
+# Processando o segundo número
+# if num % 2 == 0:
+#     quantidade_pares += 1
+#     soma_pares += num
+# else:
+#     quantidade_impares += 1
+#     soma_impares += num
+
+# if num > 0:
+#     quantidade_positivos += 1
+# elif num < 0:
+#     quantidade_negativos += 1
+total_inseridos = len(numeros)
+maior_numero = max(numeros)
+menor_numero = min(numeros)
+media_total = sum(numeros) / total_inseridos
+
+media_pares = sum(pares) / len(pares) if len(pares) > 0 else 0
+media_impares = sum(impares) / len(impares) if len(impares) > 0 else 0
+
+# Calculando as médias
+
+
+# Imprimindo as estatísticas
+print('\n' + '='*30)
+print('     RELATORIO FINAL')
+print('='*30)
+print(f'Pares: {len(pares)} | impares: {len(impares)}')
+print(f'Positivos: {positivo} | negativo: {impares}')
+print(f'Total de num inseridos: {total_inseridos}')
+print(f'Maior numero: {maior_numero} | menor Numero: {menor_numero}')
+print(f'Media dos pares: {media_pares:.3f}')
+print(f'Media dos impares: {media_impares:.3f}')
+print(f'Media geral: {media_total:.3f}')
+
+
+
+print(f'Numeros na ordem inversa: {numeros[::-1]}')
+print('='*30)
+
+
+
+
+
+
+
+
+
+
+# print("\nEstatísticas dos números:")
+# print(f"Quantidade de pares: {quantidade_pares}")
+# print(f"Quantidade de ímpares: {quantidade_impares}")
+# print(f"Quantidade de positivos: {quantidade_positivos}")
+# print(f"Quantidade de negativos: {quantidade_negativos}")
+# print(f'Maior num: {maior_numero}')
+# print(f'Menor num: {menor_numero}')
