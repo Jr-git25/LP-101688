@@ -76,7 +76,7 @@ else:
 valor_inss = salario_base * aliquota_inss if aliquota_inss > 0 else 951.62
 print(f'Desconto INSS: {msg_inss} -> R$ {valor_inss:.2f}')
 
-# --- CÁLCULO IRRF (Baseado na sua tabela) ---
+# --- CÁLCULO IRRF  ---
 # Base de cálculo do IRRF é o salário menos o INSS
 base_irrf = salario_base - valor_inss
 
@@ -94,7 +94,7 @@ elif base_irrf <= 4664.68:
     valor_irrf = base_irrf * DESC_IRRF["FAIXA4"]
     msg_irrf = "27.5%"
 else:
-    valor_irrf = base_irrf * 0.275 # Mantendo o teto da sua tabela
+    valor_irrf = base_irrf * 0.275 
     msg_irrf = "27.5% (Acima do teto)"
 
 print(f'Desconto IRRF: {msg_irrf} -> R$ {valor_irrf:.2f}')
